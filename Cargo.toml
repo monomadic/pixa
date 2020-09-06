@@ -1,0 +1,11 @@
+[package]
+name = "pixa"
+version = "0.1.0"
+authors = ["nom"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+minifb = "0.18.0"
+fontdue = "0.2.4"
