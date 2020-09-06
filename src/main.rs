@@ -1,4 +1,5 @@
 mod window;
+mod canvas;
 use window::Window;
 
 // const CHARACTER: char = '$';
@@ -8,7 +9,9 @@ fn main() {
     const WIDTH: usize = 640;
     const HEIGHT: usize = 360;
 
-    let mut window = Window::new(WIDTH, HEIGHT, "test");
+    let mut window = Window::new(WIDTH, HEIGHT, "test").unwrap();
+
+    let _ = window.run();
 
     // Limit to max ~60 fps update rate
     // window.limit_update_rate(Some(std::time::Duration::from_micros(16600)));

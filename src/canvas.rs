@@ -1,8 +1,8 @@
 
 pub struct Canvas {
-    buffer: Vec<u32>,
-    width: usize,
-    height: usize,
+    pub buffer: Vec<u32>,
+    pub width: usize,
+    pub height: usize,
 }
 
 impl Canvas {
@@ -14,7 +14,9 @@ impl Canvas {
         }
     }
 
-    pub fn point(&mut self, x: usize, y: usize) {
-        
+    pub fn draw_point(&mut self, x: usize, y: usize, color: u32) {
+        for pixel in self.buffer.iter_mut() {
+            *pixel = 0xFF0000;
+        }
     }
 }
